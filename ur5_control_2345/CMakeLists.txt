@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(ur5_control)
+project(ur5_control_2345)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -8,6 +8,9 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclpy REQUIRED)
+# uncomment the following section in order to fill in
+# further dependencies manually.
+# find_package(<dependency> REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -21,27 +24,13 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-# Install Python scripts
 install(PROGRAMS
-    src/task1b_boiler_plate.py
-    src/task1b.py
-    src/task1c.py
-    src/task2b_manipulation.py
-    src/task2b_perception.py
-    DESTINATION lib/${PROJECT_NAME}
-)
-
-install(PROGRAMS
-    src/bonus_task2_boiler_plate.py
-    src/task3a.py
-    src/task3b_manipulation.py
-    src/task3b_perception.py
-    src/task3b.py
-    src/task4a_manipulation_sim.py
-    src/task4a_manipulation.py
-    src/task4a_perception.py
-    src/task4c_perception.py
-    src/task4c_manipulation.py
+    src/task5_perception.py
+    src/task5_manipulation.py
+    src/task6_manipulation.py
+    src/task6_perception.py
+    src/manipulation_final.py
+    src/perception_final.py
     DESTINATION lib/${PROJECT_NAME}
 )
 
